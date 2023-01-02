@@ -23,7 +23,7 @@ function Feed({ tweets: tweetsProp }: FeedProps) {
   };
 
   return (
-    <div className="col-span-7 border-x lg:col-span-5">
+    <div className="col-span-7 max-h-screen overflow-scroll border-x scrollbar-hide lg:col-span-5">
       <div className="flex items-center justify-between">
         <h1 className="p-5 pb-0 text-xl font-bold">首頁</h1>
         <ArrowPathIcon
@@ -34,7 +34,7 @@ function Feed({ tweets: tweetsProp }: FeedProps) {
         />
       </div>
       <div>
-        <TweetBox />
+        <TweetBox setTweets={setTweets} />
       </div>
       <div>
         {tweets.map((tweet) => (
