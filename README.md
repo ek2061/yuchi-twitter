@@ -1,27 +1,59 @@
-# Next.js + Tailwind CSS Example
+# yuchi-twitter
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white&style=plastic)
+![Next.js](https://img.shields.io/badge/-Next.js-000000?logo=Next.js&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/-TailwindCSS-06B6D4?logo=tailwindcss&logoColor=white)
+![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=TypeScript&logoColor=white)
 
-## Deploy your own
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ceb39b98-5158-4e91-92c7-50ec87c9f434/deploy-status)](https://app.netlify.com/sites/yuchi-twitter/deploys)
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+a website modeled after Twitter, created by React, Next.js, TailwindCSS, TypeScript and deploy on Netlify.  
+use [Next-Auth](https://next-auth.js.org/) for Twitter OAuth  
+just for practice, if you want to use real twitter, go to [Twitter](https://twitter.com/) :)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+## Quick Start
 
-## How to use
+add `.evn.local` in root directory, and write down
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+```env
+NEXT_PUBLIC_SANITY_DATASET=
+NEXT_PUBLIC_SANITY_PROJECT_ID=
+NEXT_PUBLIC_BASE_URL=
+NEXTAUTH_URL=
+NEXTAUTH_SECRET=
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
+SANITY_API_TOKEN=
+
+TWITTER_CLIENT_ID=
+TWITTER_CLIENT_SECRET=
 ```
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+you can run this project by
 
 ```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
+yarn install
+
+yarn dev
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+then open browser and go to http://127.0.0.1:3000/
+
+## Create SANITY client
+
+if you want to create a SANITY client, you must first confirm that you are on the main branch and there is an `yuchi-twitter-sanity` folder in the root directory.
+
+```bash
+cd yuchi-twitter-sanity
+
+yarn install
+
+yarn dev
+```
+
+## Deploy
+
+```bash
+yarn build
+
+yarn start
+```
