@@ -23,7 +23,7 @@ function TweetBox() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             type="text"
-            placeholder="有什麼新鮮事"
+            placeholder="有什麼新鮮事？"
             className="h-24 w-full text-xl outline-none 
             placeholder:text-xl"
           />
